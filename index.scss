@@ -1,0 +1,138 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+
+    .ct {
+        position: absolute;
+        z-index: 999;
+        left: 50px; top: 20px;
+        width: 140px;
+        height: 165px;
+
+        .c {
+            position: absolute;
+            z-index: 999;
+            left: 50%; top: 50%;
+        }
+    }
+
+    .fixed {
+        position: fixed;
+        z-index: 1;
+        left: 50px; top: 10%;
+        width: 100px;
+        height: 50px;
+        background-image: url('wolf-clipart-running-1.png');
+        background-size: cover;
+        transform: rotateY(180deg);
+        transition: .3s;
+    }
+
+    .outer-wrapper {
+        position: absolute;
+        width: 100vh;
+        height: 100vw;
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 400vw;
+            transform: rotate(90deg) translateY(-100vh);
+            transform-origin: top left;
+
+            .block {
+                width: 100vw;
+                min-width: 800px;
+                max-width: 1500px;
+                height: 100vh;
+            }
+
+            .I {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+
+                .art {
+                    position: relative;
+                    z-index: 999;
+                    width: 400px;
+                    height: 300px;
+                    background-image: url('screenshot.png');
+                    background-size: cover;
+                    transform: rotateY(180deg);
+                }
+            }
+
+            // .I::after {
+            //     content: '';
+            //     position: absolute;
+            //     left: 0; top: 0;
+            //     width: 26vh;
+            //     height: 200vh;
+            //     background: #000;
+            //     transform: skewX(-10deg);
+            //     transform-origin: 100% 0;
+            // }
+
+            .II {
+                position: relative;
+                z-index: 999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgb(10, 10, 10);
+                // background-image: url('y-so-serious.png');
+                // transform: skew(-15deg, -15deg);
+                // transform-origin: 100% 0, 0 100%;
+                transform: skewX(-10deg);
+                transform-origin: 100% 0;
+
+                .txt {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 50%;
+                    font-family: 'Anton', sans-serif;
+                    font-family: 'Open Sans Condensed', sans-serif;
+                    font-size: 1.5rem;
+                    color: #fff;
+                    transform: skewX(10deg);
+                    transform-origin: 100% 0;
+                }
+            }
+
+            // .II::before {
+            //     position: absolute;
+            //     z-index: 0;
+            //     width: 100vh;
+            //     height: 200vh;
+            //     content: '';
+            //     background: crimson;
+            //     transform: skewX(-10deg);
+            //     transform-origin: 100% 0;
+            // }
+
+            .III {
+                background: #fff;
+            }
+
+            .IV {
+                background: rgb(10, 10, 10);
+                transform: skewX(10deg);
+                transform-origin: 100% 0;
+            }
+        }
+    }
+}
