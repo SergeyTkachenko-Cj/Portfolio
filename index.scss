@@ -6,30 +6,16 @@ html, body {
 }
 
 body {
-    position: relative;
-
-    .ct {
-        position: absolute;
-        z-index: 999;
-        left: 50px; top: 20px;
-        width: 140px;
-        height: 165px;
-
-        .c {
-            position: absolute;
-            z-index: 999;
-            left: 50%; top: 50%;
-        }
-    }
 
     .fixed {
         position: fixed;
-        z-index: 1;
+        z-index: 0;
         left: 50px; top: 10%;
-        width: 100px;
-        height: 50px;
+        width: 9vw;
+        height: 4.5vw;
         background-image: url('wolf-clipart-running-1.png');
         background-size: cover;
+        -webkit-transform: rotateY(180deg);
         transform: rotateY(180deg);
         transition: .3s;
     }
@@ -38,7 +24,11 @@ body {
         position: absolute;
         width: 100vh;
         height: 100vw;
+        -webkit-transform: rotate(-90deg) translateX(-100vh);
+        -ms-transform: rotate(-90deg) translateX(-100vh);
         transform: rotate(-90deg) translateX(-100vh);
+        -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
         transform-origin: top left;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -46,14 +36,17 @@ body {
         .wrapper {
             display: flex;
             flex-direction: row;
-            width: 400vw;
+            width: 700vw;
+            -webkit-transform: rotate(90deg) translateY(-100vh);
+            -ms-transform: rotate(90deg) translateY(-100vh);
             transform: rotate(90deg) translateY(-100vh);
+            -webkit-transform-origin: top left;
+            -ms-transform-origin: top left;
             transform-origin: top left;
 
             .block {
                 width: 100vw;
                 min-width: 800px;
-                max-width: 1500px;
                 height: 100vh;
             }
 
@@ -66,36 +59,34 @@ body {
                 .art {
                     position: relative;
                     z-index: 999;
-                    width: 400px;
-                    height: 300px;
-                    background-image: url('screenshot.png');
+                    // width: 600px;
+                    // height: 300px;
+                    width: 50vw;
+                    height: 23vw;
+                    // background-image: url('screenshot.png');
+                    background-image: url('wolf-clipart-running-1.png');
                     background-size: cover;
+                    -webkit-transform: rotateY(180deg);
                     transform: rotateY(180deg);
                 }
             }
 
-            // .I::after {
-            //     content: '';
-            //     position: absolute;
-            //     left: 0; top: 0;
-            //     width: 26vh;
-            //     height: 200vh;
-            //     background: #000;
-            //     transform: skewX(-10deg);
-            //     transform-origin: 100% 0;
-            // }
-
             .II {
                 position: relative;
                 z-index: 999;
+
+                // max-width: 1300px;
+                // min-width: 1300px;
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background: rgb(10, 10, 10);
-                // background-image: url('y-so-serious.png');
-                // transform: skew(-15deg, -15deg);
-                // transform-origin: 100% 0, 0 100%;
+                -webkit-transform: skewX(-10deg);
+                -ms-transform: skewX(-10deg);
                 transform: skewX(-10deg);
+                -webkit-transform-origin: 100% 0;
+                -ms-transform-origin: 100% 0;
                 transform-origin: 100% 0;
 
                 .txt {
@@ -104,34 +95,189 @@ body {
                     align-items: center;
                     width: 50%;
                     height: 50%;
-                    font-family: 'Anton', sans-serif;
                     font-family: 'Open Sans Condensed', sans-serif;
-                    font-size: 1.5rem;
+                    font-size: 2vw;
                     color: #fff;
+                    -webkit-transform: skewX(10deg);
+                    -ms-transform: skewX(10deg);
                     transform: skewX(10deg);
+                    -webkit-transform-origin: 100% 0;
+                    -ms-transform-origin: 100% 0;
                     transform-origin: 100% 0;
                 }
             }
 
-            // .II::before {
-            //     position: absolute;
-            //     z-index: 0;
-            //     width: 100vh;
-            //     height: 200vh;
-            //     content: '';
-            //     background: crimson;
-            //     transform: skewX(-10deg);
-            //     transform-origin: 100% 0;
-            // }
-
             .III {
-                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // max-width: 1500px;
+                // min-width: 3000px;
+                width: 150vw;
+                background: transparent;
+
+                .long_word {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 25vw;
+
+                    .letter_up {
+                        transform: translate(0, -1vw);
+                    }
+
+                    .letter_down {
+                        transform: translate(0, 1vw);
+                    }
+                }
+
+                // .txt_block {
+                //     margin-left: 2rem;
+                //     font-family: 'Open Sans Condensed', sans-serif;
+                //     color: #000;
+
+                //     h1 {
+                //         font-size: 2rem;
+                //     }
+    
+                //     .txtII {
+                //         display: flex;
+                //         justify-content: center;
+                //         align-items: center;
+                //         font-size: 1.5rem;
+                //     }
+    
+                //     .to_site {
+                //         width: 10rem;
+                //         height: 3rem;
+                //         margin-top: 1rem;
+                //         font-family: 'Open Sans Condensed', sans-serif;
+                //         font-size: 1.5rem;
+                //         border: none;
+                //         outline: none;
+                //         color: #fff;
+                //         background: #000;
+                //     }
+
+                //     .to_site:focus,
+                //     .to_site:active {
+                //         border: none;
+                //         outline: none;
+                //     }
+                // }
             }
 
             .IV {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                // min-width: 2000px;
+
                 background: rgb(10, 10, 10);
+                -webkit-transform: skewX(10deg);
+                -ms-transform: skewX(10deg);
                 transform: skewX(10deg);
+                -webkit-transform-origin: 100% 0;
+                -ms-transform-origin: 100% 0;
                 transform-origin: 100% 0;
+
+                .txt_block {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin-bottom: 5rem;
+                    font-family: 'Open Sans Condensed', sans-serif;
+                    color: #fff;
+                    -webkit-transform: skewX(-10deg);
+                    -ms-transform: skewX(-10deg);
+                    transform: skewX(-10deg);
+                    -webkit-transform-origin: 100% 0;
+                    -ms-transform-origin: 100% 0;
+                    transform-origin: 100% 0;
+
+                    .art_project_I {
+                        position: relative;
+                        z-index: 999;
+                        width: 350px;
+                        height: 200px;
+                        margin-right: 2rem;
+                        background: url('depositphotos_105751564-stock-illustration-cute-cartoon-wolf-head.jpg');
+                        background-image: url('screeeen.png');
+                        // background-image: url('https://media.giphy.com/media/a3wd7ZOWfRuLu/giphy.gif');
+                        background-size: cover;
+                    }
+
+                    .art_project_II {
+                        // position: relative;
+                        z-index: 999;
+                        width: 350px;
+                        height: 200px;
+                        margin-right: 2rem;
+                        background-image: url('scrn.png');
+                        // background-image: url('https://media.giphy.com/media/a3wd7ZOWfRuLu/giphy.gif');
+                        background-size: cover;
+                        // -webkit-transform: skewX(10deg);
+                        // -ms-transform: skewX(10deg);
+                        // transform: skewX(10deg);
+                        // -webkit-transform-origin: 100% 0;
+                        // -ms-transform-origin: 100% 0;
+                        // transform-origin: 100% 0;
+                    }
+
+                    .h_logo {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        h1 {
+                            font-size: 2rem;
+                        }
+    
+                        .logo_naladka {
+                            width: 57px;
+                            height: 50px;
+                            margin-left: 1rem;
+                            background-image: url('naladka-logo.png');
+                            background-size: cover;
+                        }
+
+                        .logo_argus {
+                            width: 50px;
+                            height: 55px;
+                            margin-left: 1rem;
+                            background-image: url('ffhkigpalgidjmom.png');
+                            background-size: cover;
+                        }
+                    }
+    
+                    .txtII {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.5rem;
+                    }
+    
+                    .to_site {
+                        width: 10rem;
+                        height: 3rem;
+                        margin-top: 1rem;
+                        font-family: 'Open Sans Condensed', sans-serif;
+                        font-size: 1.5rem;
+                        border: none;
+                        outline: none;
+                        // color: #fff;
+                        background: #fff;
+                    }
+
+                    .to_site:focus,
+                    .to_site:active {
+                        border: none;
+                        outline: none;
+                    }
+                }
             }
         }
     }
