@@ -63,7 +63,7 @@
       
     const observer: IntersectionObserver = new IntersectionObserver(callback);
       
-    const targets: NodeListOf<Element> = document.querySelectorAll(".js_anima_line, .red");
-    console.log(targets);
+    const targets: NodeListOf<Element> = document.querySelectorAll(".js_anima_line, .js_sign");
+    // console.log(targets);
     targets.forEach(target => observer.observe(target));
 })();

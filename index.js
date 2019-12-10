@@ -49,7 +49,7 @@
         });
     };
     var observer = new IntersectionObserver(callback);
-    var targets = document.querySelectorAll(".js_anima_line, .red");
-    console.log(targets);
+    var targets = document.querySelectorAll(".js_anima_line, .js_sign");
+    // console.log(targets);
     targets.forEach(function (target) { return observer.observe(target); });
 })();
